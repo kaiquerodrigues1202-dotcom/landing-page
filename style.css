@@ -86,8 +86,8 @@ body{
 }
 
 .hero-left h1{
-    font-size: 42px;
-    line-height: 1.2;
+    font-size: 52px;
+    line-height: 1.08;
 
     font-weight: 700;
 
@@ -95,7 +95,9 @@ body{
 
     text-shadow: 0 4px 15px rgba(0,0,0,0.30);
 
-    max-width: 650px;
+    max-width: 720px;
+
+    text-align: left;
 }
 
 .hero-left h1 span{
@@ -103,16 +105,18 @@ body{
 }
 
 .hero-left p{
-    font-size: 17px;
+    font-size: 20px;
     line-height: 1.7;
 
     color: #e8e8e8;
 
     margin-bottom: 35px;
 
-    max-width: 580px;
+    max-width: 650px;
 
     text-shadow: 0 2px 10px rgba(0,0,0,0.25);
+
+    text-align: left;
 }
 
 /* BOTÕES */
@@ -120,7 +124,6 @@ body{
 .buttons{
     display: flex;
     gap: 20px;
-
     flex-wrap: wrap;
 }
 
@@ -131,12 +134,12 @@ body{
     align-items: center;
     justify-content: center;
 
-    padding: 16px 30px;
+    padding: 18px 34px;
 
-    border-radius: 14px;
+    border-radius: 16px;
     text-decoration: none;
 
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
 
     transition: 0.3s ease;
@@ -153,7 +156,6 @@ body{
 
 .btn-primary:hover{
     background: #18a34a;
-
     transform: translateY(-4px);
 }
 
@@ -161,7 +163,6 @@ body{
 
 .hero-right{
     flex: 1;
-
     display: flex;
     justify-content: center;
 }
@@ -181,20 +182,21 @@ body{
 
     .hero-container{
         flex-direction: column;
-        text-align: center;
+        text-align: left;
+        align-items: flex-start;
     }
 
     .hero-left p,
     .hero-left h1{
-        margin-inline: auto;
+        margin-inline: 0;
     }
 
     .buttons{
-        justify-content: center;
+        justify-content: flex-start;
     }
 
     .hero-left h1{
-        font-size: 34px;
+        font-size: 40px;
     }
 
 }
@@ -203,47 +205,72 @@ body{
 
 @media(max-width: 768px){
 
-    /* REMOVE FOTO DO INSS */
+    /* MANTÉM IMAGEM DO ACIDENTE NO MOBILE */
     .hero-img{
-        display: none;
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(1.05);
+        z-index: 0;
     }
 
-    /* FUNDO VERDE */
+    /* REMOVE FUNDO FIXO */
     .hero{
-        background: linear-gradient(
-            135deg,
-            #0f766e,
-            #115e59,
-            #064e3b
-        );
-
-        padding: 60px 20px;
+        background: none;
+        position: relative;
+        padding: 60px 28px;
     }
 
-    /* REMOVE FOTO LATERAL */
+    /* OVERLAY POR CIMA DA IMAGEM */
+    .overlay{
+        z-index: 1;
+    }
+
+    /* CONTEÚDO POR CIMA */
+    .hero-container{
+        position: relative;
+        z-index: 2;
+        align-items: flex-start;
+    }
+
+    /* REMOVE IMAGEM LATERAL */
     .hero-right{
         display: none;
     }
 
     .hero-left{
-        text-align: center;
+        text-align: left;
+        width: 100%;
     }
 
     .hero-left h1{
-        font-size: 28px;
+        font-size: 34px;
+        line-height: 1.08;
+        max-width: 100%;
+        text-align: left;
     }
 
     .hero-left p{
         font-size: 16px;
+        line-height: 1.7;
+        max-width: 100%;
+        text-align: left;
     }
 
     .logo{
-        width: 160px;
+        width: 170px;
+    }
+
+    .buttons{
+        width: 100%;
     }
 
     .btn{
         width: 100%;
         text-align: center;
+        font-size: 17px;
+        padding: 18px 20px;
     }
-
 }
