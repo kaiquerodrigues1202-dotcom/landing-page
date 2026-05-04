@@ -172,13 +172,17 @@ body{
     gap: 60px;
 }
 
+/* CENTRALIZA IMAGEM */
 .beneficio .imagem{
     flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
+/* 🔥 TAMANHO IGUAL AO HERO */
 .beneficio .imagem img{
     width: 100%;
-    max-width: 520px;
+    max-width: 420px;
     border-radius: 20px;
     box-shadow: 0 20px 50px rgba(0,0,0,0.15);
 }
@@ -219,12 +223,12 @@ body{
     font-weight: 700;
 }
 
-/* 🔥 TEXTO PRETO (DESKTOP) */
+/* 🔥 TEXTO PRETO */
 .texto-preto{
     color: #1a1a1a;
 }
 
-/* 🔥 NEGRITO DESTACADO */
+/* 🔥 NEGRITO */
 .conteudo strong{
     color: #005f73;
     font-weight: 700;
@@ -304,7 +308,7 @@ body{
         gap: 30px;
     }
 
-    /* TEXTO BRANCO */
+    /* 🔥 TEXTO BRANCO */
     .beneficio .conteudo h2{
         font-size: 24px;
         color: #fff;
@@ -320,9 +324,19 @@ body{
         color: #fff;
     }
 
-    /* NEGRITO MAIS FORTE */
+    /* 🔥 NEGRITO AZUL */
     .conteudo strong{
         color: #52d6ff;
+    }
+
+    /* 🔥 BOTÃO VERDE WHATSAPP */
+    .beneficio .btn{
+        background: #25d366;
+        color: #fff;
+    }
+
+    .beneficio .btn:hover{
+        background: #1ebe5d;
     }
 }
 
